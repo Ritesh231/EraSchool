@@ -2,64 +2,53 @@ import { useState } from 'react'
 
 const programs = [
   {
-    level: 'Pre-Primary',
-    emoji: '🌱',
-    grades: 'Nursery – KG',
-    age: 'Ages 3 – 5',
+    level: 'Nursery',
+    emoji: '🌸',
+    grades: 'Nursery (Pre-KG)',
+    age: 'Ages 2.5 – 3.5',
     color: 'from-pink-400 to-rose-500',
     bg: 'bg-pink-50',
     border: 'border-pink-200',
-    description: 'A nurturing play-based environment that fosters curiosity, creativity, and social skills in our youngest learners.',
-    features: ['Play-based Learning', 'Story Time', 'Art & Craft', 'Music & Dance', 'Outdoor Play', 'Social Skills'],
+    description: 'A gentle, loving first step into school life! We welcome our tiniest learners with songs, colours, and warm cuddles as they discover the joy of being together.',
+    features: ['Sensory Play', 'Nursery Rhymes', 'Finger Painting', 'Free Play', 'Circle Time', 'Storytelling'],
   },
   {
-    level: 'Primary School',
-    emoji: '📗',
-    grades: 'Class I – V',
-    age: 'Ages 6 – 10',
-    color: 'from-blue-400 to-era-blue',
+    level: 'Junior KG',
+    emoji: '🌟',
+    grades: 'Junior KG',
+    age: 'Ages 3.5 – 4.5',
+    color: 'from-yellow-400 to-orange-400',
+    bg: 'bg-yellow-50',
+    border: 'border-yellow-200',
+    description: 'Our star programme! Jr KG is packed with fun — alphabet adventures, number games, art explosions, music, dance, and the best friends they will make for life!',
+    features: ['Alphabet Fun', 'Number Play', 'Art & Craft', 'Music & Dance', 'Outdoor Games', 'Show & Tell'],
+  },
+  {
+    level: 'Senior KG',
+    emoji: '🚀',
+    grades: 'Senior KG',
+    age: 'Ages 4.5 – 5.5',
+    color: 'from-blue-400 to-indigo-500',
     bg: 'bg-blue-50',
     border: 'border-blue-200',
-    description: 'Building strong academic foundations with activity-based learning, critical thinking, and character development.',
-    features: ['CBSE Curriculum', 'Smart Classes', 'Science Labs', 'Language Skills', 'Mathematics', 'EVS Projects'],
+    description: 'Getting ready to be big school kids! Sr KG builds reading, writing, and counting skills through exciting activities, projects, and creative storytelling adventures.',
+    features: ['Early Reading', 'Writing Skills', 'Counting Fun', 'Science Exploration', 'Drama & Role Play', 'Nature Walks'],
   },
   {
-    level: 'Middle School',
-    emoji: '📘',
-    grades: 'Class VI – VIII',
-    age: 'Ages 11 – 13',
-    color: 'from-indigo-400 to-purple-600',
-    bg: 'bg-indigo-50',
-    border: 'border-indigo-200',
-    description: 'Deepening conceptual understanding with subject specialization, project-based learning, and leadership development.',
-    features: ['Subject Labs', 'Coding & Robotics', 'Debate Club', 'Sports Teams', 'Art Studio', 'Community Service'],
-  },
-  {
-    level: 'Secondary',
-    emoji: '📙',
-    grades: 'Class IX – X',
-    age: 'Ages 14 – 15',
-    color: 'from-amber-400 to-orange-500',
-    bg: 'bg-amber-50',
-    border: 'border-amber-200',
-    description: 'Rigorous CBSE board preparation with expert faculty, regular mock tests, and comprehensive career guidance.',
-    features: ['Board Prep', 'Mock Tests', 'Career Counseling', 'Advanced Labs', 'Olympiad Training', 'Study Skills'],
-  },
-  {
-    level: 'Senior Secondary',
+    level: 'Class 1 & 2',
     emoji: '🎓',
-    grades: 'Class XI – XII',
-    age: 'Ages 16 – 17',
-    color: 'from-green-400 to-era-green',
+    grades: 'Class I – II',
+    age: 'Ages 6 – 7',
+    color: 'from-green-400 to-teal-500',
     bg: 'bg-green-50',
     border: 'border-green-200',
-    description: 'Specialized streams in Science, Commerce & Humanities with college entrance coaching and placement guidance.',
-    features: ['Science Stream', 'Commerce Stream', 'Humanities', 'JEE/NEET Prep', 'CA Foundation', 'University Guidance'],
+    description: 'The exciting leap to primary school! Class 1 & 2 continue our hands-on, activity-based approach building strong foundations in English, Maths, and Environmental Studies.',
+    features: ['Reading & Writing', 'Maths Concepts', 'EVS Activities', 'Arts & Crafts', 'Physical Education', 'Group Projects'],
   },
 ]
 
 export default function Programs() {
-  const [active, setActive] = useState(0)
+  const [active, setActive] = useState(1)
   const prog = programs[active]
 
   return (
@@ -67,9 +56,9 @@ export default function Programs() {
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="inline-block bg-era-blue/10 text-era-blue font-semibold text-sm px-4 py-1.5 rounded-full mb-4 tracking-wider uppercase">Academic Programs</span>
-          <h2 className="section-title">Our <span className="text-era-blue">Programs</span></h2>
-          <p className="section-subtitle">Comprehensive education from Pre-Primary to Senior Secondary, tailored to each stage of growth.</p>
+          <span className="inline-block bg-era-blue/10 text-era-blue font-semibold text-sm px-4 py-1.5 rounded-full mb-4 tracking-wider uppercase">Our Programmes</span>
+          <h2 className="section-title">Learning That Feels Like <span className="text-era-blue">Play! 🎈</span></h2>
+          <p className="section-subtitle">From tiny Nursery tots to Class 2 superstars — every step is filled with joy and discovery.</p>
         </div>
 
         {/* Tabs */}
@@ -108,14 +97,14 @@ export default function Programs() {
 
           <div className="p-10 grid md:grid-cols-2 gap-10">
             <div>
-              <h4 className="font-heading font-bold text-era-dark text-xl mb-4">Program Overview</h4>
+              <h4 className="font-heading font-bold text-era-dark text-xl mb-4">About This Programme</h4>
               <p className="text-gray-600 leading-relaxed text-lg">{prog.description}</p>
               <a href="#contact" className="inline-flex items-center gap-2 mt-6 bg-era-blue text-white font-semibold px-6 py-3 rounded-full hover:bg-era-dark transition-colors duration-300">
-                Enquire Now <span>→</span>
+                🎒 Enquire Now <span>→</span>
               </a>
             </div>
             <div>
-              <h4 className="font-heading font-bold text-era-dark text-xl mb-4">Key Features</h4>
+              <h4 className="font-heading font-bold text-era-dark text-xl mb-4">What We Learn & Do 🌟</h4>
               <div className="grid grid-cols-2 gap-3">
                 {prog.features.map((f, i) => (
                   <div key={i} className="flex items-center gap-2 bg-white rounded-xl p-3 shadow-sm border border-gray-100">

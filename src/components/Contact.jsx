@@ -23,9 +23,9 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="inline-block bg-era-blue/10 text-era-blue font-semibold text-sm px-4 py-1.5 rounded-full mb-4 tracking-wider uppercase">Get In Touch</span>
-          <h2 className="section-title">Admissions &amp; <span className="text-era-blue">Contact</span></h2>
-          <p className="section-subtitle">Take the first step toward your child's bright future. Our admissions team is ready to help.</p>
+          <span className="inline-block bg-era-blue/10 text-era-blue font-semibold text-sm px-4 py-1.5 rounded-full mb-4 tracking-wider uppercase">Join Our Family</span>
+          <h2 className="section-title">Enrol Your Little Star 🌟<br /><span className="text-era-blue">Today!</span></h2>
+          <p className="section-subtitle">Take the first step toward the happiest school years of your child's life. Our friendly team is ready to help you! 🎒</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -38,8 +38,8 @@ export default function Contact() {
                 <div className="flex items-center gap-3 mb-6">
                   <img src="/era-logo.png" alt="ERA Logo" className="w-14 h-14 object-contain drop-shadow-lg" />
                   <div>
-                    <p className="font-heading font-bold text-xl">ERA International School</p>
-                    <p className="text-era-yellow text-sm">Admissions Open 2025-26</p>
+                    <p className="font-heading font-bold text-xl">ERA Jr KG International School</p>
+                    <p className="text-era-yellow text-sm">🎒 Admissions Open 2025-26</p>
                   </div>
                 </div>
 
@@ -47,8 +47,8 @@ export default function Contact() {
                   {[
                     { icon: '📍', label: 'Address', value: '123 Education Avenue, Knowledge Park,\nNew Delhi – 110001, India' },
                     { icon: '📞', label: 'Phone', value: '+91 98765 43210\n+91 11 2345 6789' },
-                    { icon: '📧', label: 'Email', value: 'admissions@erainternational.edu.in\ninfo@erainternational.edu.in' },
-                    { icon: '🕐', label: 'School Timings', value: 'Mon – Sat: 8:00 AM – 3:30 PM\nOffice: 9:00 AM – 5:00 PM' },
+                    { icon: '📧', label: 'Email', value: 'admissions@erainternational.edu.in' },
+                    { icon: '🕐', label: 'School Timings', value: 'Mon – Sat: 8:30 AM – 12:30 PM (Jr KG)\nOffice: 9:00 AM – 5:00 PM' },
                   ].map((item, i) => (
                     <div key={i} className="flex gap-4 glass rounded-xl p-4">
                       <span className="text-2xl">{item.icon}</span>
@@ -57,6 +57,13 @@ export default function Contact() {
                         <p className="text-white/80 text-sm leading-relaxed whitespace-pre-line">{item.value}</p>
                       </div>
                     </div>
+                  ))}
+                </div>
+
+                {/* Quick info badges */}
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {['🎨 Art & Craft', '🎵 Music & Dance', '🌳 Play Garden', '🍎 Healthy Snacks', '🚌 Safe Bus'].map((tag) => (
+                    <span key={tag} className="bg-white/15 text-white text-xs px-3 py-1 rounded-full font-medium">{tag}</span>
                   ))}
                 </div>
               </div>
@@ -90,15 +97,17 @@ export default function Contact() {
           <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 p-8">
             {submitted ? (
               <div className="text-center py-16">
-                <div className="text-7xl mb-4 animate-bounce-slow">✅</div>
-                <h3 className="font-heading font-bold text-2xl text-era-dark mb-3">Application Submitted!</h3>
-                <p className="text-gray-500 mb-6">Thank you for your interest in ERA International School. Our admissions team will contact you within 24 hours.</p>
+                <div className="text-7xl mb-4 animate-bounce-slow">🎉</div>
+                <h3 className="font-heading font-bold text-2xl text-era-dark mb-3">Yay! Application Received! 🌟</h3>
+                <p className="text-gray-500 mb-6">Thank you for choosing ERA Jr KG! Our friendly admissions team will call you within 24 hours. We can't wait to welcome your little star! 💛</p>
                 <button onClick={() => setSubmitted(false)} className="btn-primary">Submit Another Enquiry</button>
               </div>
             ) : (
               <>
-                <h3 className="font-heading font-bold text-2xl text-era-dark mb-2">Admission Enquiry</h3>
-                <p className="text-gray-400 text-sm mb-8">Fill in the form below and we'll get back to you shortly.</p>
+                <div className="mb-6">
+                  <h3 className="font-heading font-bold text-2xl text-era-dark mb-1">🎒 Jr KG Admission Enquiry</h3>
+                  <p className="text-gray-400 text-sm">Fill in the form and we'll get back to you with all the exciting details!</p>
+                </div>
 
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid grid-cols-2 gap-4">
@@ -110,19 +119,19 @@ export default function Contact() {
                         value={formData.parentName}
                         onChange={handleChange}
                         required
-                        placeholder="John Doe"
+                        placeholder="Your Name"
                         className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-era-blue focus:ring-2 focus:ring-era-blue/20 transition-all duration-200"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-1.5">Student's Name *</label>
+                      <label className="block text-sm font-semibold text-gray-700 mb-1.5">Child's Name *</label>
                       <input
                         type="text"
                         name="studentName"
                         value={formData.studentName}
                         onChange={handleChange}
                         required
-                        placeholder="Jane Doe"
+                        placeholder="Your Child's Name"
                         className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-era-blue focus:ring-2 focus:ring-era-blue/20 transition-all duration-200"
                       />
                     </div>
@@ -142,7 +151,7 @@ export default function Contact() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-1.5">Applying for Grade *</label>
+                      <label className="block text-sm font-semibold text-gray-700 mb-1.5">Applying For *</label>
                       <select
                         name="grade"
                         value={formData.grade}
@@ -150,8 +159,8 @@ export default function Contact() {
                         required
                         className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-era-blue focus:ring-2 focus:ring-era-blue/20 transition-all duration-200 bg-white"
                       >
-                        <option value="">Select Grade</option>
-                        {['Nursery', 'KG', ...Array.from({length: 12}, (_, i) => `Class ${i+1}`)].map(g => (
+                        <option value="">Select Class</option>
+                        {['Nursery (Age 2.5–3.5)', 'Junior KG (Age 3.5–4.5)', 'Senior KG (Age 4.5–5.5)', 'Class 1', 'Class 2'].map(g => (
                           <option key={g} value={g}>{g}</option>
                         ))}
                       </select>
@@ -171,13 +180,13 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-1.5">Message / Query</label>
+                    <label className="block text-sm font-semibold text-gray-700 mb-1.5">Message / Any Questions?</label>
                     <textarea
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
                       rows={4}
-                      placeholder="Tell us anything you'd like to know about admissions, fees, facilities..."
+                      placeholder="Ask us anything about fees, timings, admission process, or what a typical day looks like for your little one..."
                       className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-era-blue focus:ring-2 focus:ring-era-blue/20 transition-all duration-200 resize-none"
                     />
                   </div>
@@ -193,9 +202,9 @@ export default function Contact() {
                           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
                           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
                         </svg>
-                        Submitting...
+                        Sending...
                       </>
-                    ) : '🚀 Submit Admission Enquiry'}
+                    ) : '🎒 Enrol My Little Star!'}
                   </button>
                 </form>
               </>

@@ -16,12 +16,12 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-4">
               <img src="/era-logo.png" alt="ERA Logo" className="w-14 h-14 object-contain drop-shadow-lg" />
               <div>
-                <p className="font-heading font-bold text-lg leading-tight">ERA</p>
+                <p className="font-heading font-bold text-lg leading-tight">ERA Jr KG</p>
                 <p className="text-era-yellow text-xs tracking-widest uppercase">International School</p>
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-5">
-              Nurturing tomorrow's leaders through world-class education, innovation, and values since 1999.
+              Nurturing little hearts and bright minds through love, laughter, and joyful play-based learning since 1999. 🌟
             </p>
             <div className="flex gap-2">
               {['📘', '📸', '🐦', '▶️'].map((icon, i) => (
@@ -36,7 +36,7 @@ export default function Footer() {
           <div>
             <h4 className="font-heading font-bold text-lg mb-5 text-white">Quick Links</h4>
             <ul className="space-y-2.5">
-              {['Home', 'About Us', 'Programs', 'Facilities', 'Gallery', 'Contact Us', 'Admissions', 'Results'].map(link => (
+              {['Home', 'About Us', 'Programs', 'Facilities', 'Gallery', 'Contact Us', 'Admissions'].map(link => (
                 <li key={link}>
                   <a href={`#${link.toLowerCase().replace(' ', '')}`} className="text-gray-400 hover:text-era-yellow text-sm transition-colors duration-200 hover:pl-2 block">
                     → {link}
@@ -46,14 +46,22 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Programs */}
+          {/* Programmes */}
           <div>
-            <h4 className="font-heading font-bold text-lg mb-5 text-white">Programs</h4>
+            <h4 className="font-heading font-bold text-lg mb-5 text-white">Our Programmes 🎈</h4>
             <ul className="space-y-2.5">
-              {['Pre-Primary (Nursery–KG)', 'Primary (Class I–V)', 'Middle School (VI–VIII)', 'Secondary (IX–X)', 'Senior Secondary (XI–XII)', 'CBSE Board Prep', 'JEE / NEET Coaching'].map(prog => (
+              {[
+                '🌸 Nursery (Age 2.5–3.5)',
+                '🌟 Junior KG (Age 3.5–4.5)',
+                '🚀 Senior KG (Age 4.5–5.5)',
+                '🎓 Class 1 (Age 6–7)',
+                '🎓 Class 2 (Age 7–8)',
+                '🎨 Art & Craft',
+                '🎵 Music & Dance',
+              ].map(prog => (
                 <li key={prog}>
                   <a href="#programs" className="text-gray-400 hover:text-era-yellow text-sm transition-colors duration-200 hover:pl-2 block">
-                    → {prog}
+                    {prog}
                   </a>
                 </li>
               ))}
@@ -62,7 +70,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-heading font-bold text-lg mb-5 text-white">Contact</h4>
+            <h4 className="font-heading font-bold text-lg mb-5 text-white">Contact Us</h4>
             <div className="space-y-4 text-sm text-gray-400">
               <div className="flex gap-3">
                 <span>📍</span>
@@ -78,13 +86,13 @@ export default function Footer() {
               </div>
               <div className="flex gap-3">
                 <span>🕐</span>
-                <span>Mon–Sat: 8:00 AM – 3:30 PM</span>
+                <span>Jr KG: 8:30 AM – 12:30 PM<br/>Office: Mon–Sat 9 AM–5 PM</span>
               </div>
             </div>
 
             {/* Newsletter */}
             <div className="mt-6">
-              <p className="text-white font-semibold text-sm mb-2">Subscribe to Newsletter</p>
+              <p className="text-white font-semibold text-sm mb-2">📬 Stay Updated</p>
               <div className="flex gap-2">
                 <input
                   type="email"
@@ -100,10 +108,10 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-sm text-center md:text-left">
-            © {year} ERA International School. All Rights Reserved. | Laugh • Learn • Lead
+            © {year} ERA International School. All Rights Reserved. | 😄 Laugh • 📚 Learn • 🏆 Lead
           </p>
           <div className="flex gap-4 text-gray-500 text-xs">
-            {['Privacy Policy', 'Terms of Use', 'Sitemap', 'Disclosure'].map(link => (
+            {['Privacy Policy', 'Terms of Use', 'Sitemap'].map(link => (
               <a key={link} href="#" className="hover:text-era-yellow transition-colors duration-200">{link}</a>
             ))}
           </div>

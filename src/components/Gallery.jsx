@@ -1,16 +1,16 @@
 const galleryItems = [
-  { emoji: '🏏', label: 'Sports Day', tag: 'Sports', color: 'from-red-400 to-rose-500', desc: 'Annual Sports Day 2024' },
-  { emoji: '🔬', label: 'Science Fair', tag: 'Academics', color: 'from-green-400 to-teal-500', desc: 'Science Exhibition' },
-  { emoji: '🎭', label: 'Annual Day', tag: 'Cultural', color: 'from-purple-400 to-violet-500', desc: 'Grand Annual Function' },
-  { emoji: '🤖', label: 'Robotics Club', tag: 'Technology', color: 'from-blue-400 to-cyan-500', desc: 'Robotics Workshop' },
-  { emoji: '🎨', label: 'Art Exhibition', tag: 'Arts', color: 'from-pink-400 to-fuchsia-500', desc: 'Student Art Gallery' },
-  { emoji: '🌳', label: 'Nature Camp', tag: 'Activities', color: 'from-amber-400 to-orange-500', desc: 'Eco Camp 2024' },
-  { emoji: '📖', label: 'Book Fair', tag: 'Academics', color: 'from-indigo-400 to-blue-600', desc: 'Annual Book Fair' },
-  { emoji: '🏆', label: 'Award Ceremony', tag: 'Achievement', color: 'from-yellow-400 to-amber-500', desc: 'Prize Distribution 2024' },
-  { emoji: '🌍', label: 'International Day', tag: 'Cultural', color: 'from-emerald-400 to-green-600', desc: 'International Culture Day' },
+  { emoji: '🎨', label: 'Art Day', tag: 'Art & Craft', color: 'from-pink-400 to-fuchsia-500', desc: 'Little artists at their best!' },
+  { emoji: '🎵', label: 'Music Class', tag: 'Music', color: 'from-purple-400 to-violet-500', desc: 'Singing & rhythm fun' },
+  { emoji: '🌳', label: 'Garden Play', tag: 'Outdoor', color: 'from-green-400 to-teal-500', desc: 'Exploring nature together' },
+  { emoji: '📖', label: 'Story Time', tag: 'Stories', color: 'from-amber-400 to-orange-400', desc: 'Adventures in every book' },
+  { emoji: '🎭', label: 'Drama Play', tag: 'Pretend Play', color: 'from-blue-400 to-cyan-500', desc: 'Dress-up & role play fun' },
+  { emoji: '🎂', label: 'Birthday Bash', tag: 'Celebrations', color: 'from-rose-400 to-pink-500', desc: 'We celebrate every star!' },
+  { emoji: '🏃', label: 'Sports Fiesta', tag: 'Outdoor', color: 'from-red-400 to-rose-500', desc: 'Fun races & team games' },
+  { emoji: '🌈', label: 'Colour Day', tag: 'Celebrations', color: 'from-yellow-400 to-amber-500', desc: 'Rainbow of colours & joy' },
+  { emoji: '🧁', label: 'Baking Fun', tag: 'Activities', color: 'from-emerald-400 to-green-600', desc: 'Little chefs in action' },
 ]
 
-const tags = ['All', 'Sports', 'Academics', 'Cultural', 'Technology', 'Arts', 'Activities', 'Achievement']
+const tags = ['All', 'Art & Craft', 'Music', 'Outdoor', 'Stories', 'Pretend Play', 'Celebrations', 'Activities']
 
 import { useState } from 'react'
 
@@ -23,9 +23,9 @@ export default function Gallery() {
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <span className="inline-block bg-era-yellow/20 text-era-dark font-semibold text-sm px-4 py-1.5 rounded-full mb-4 tracking-wider uppercase">Campus Life</span>
-          <h2 className="section-title">Life at ERA</h2>
-          <p className="section-subtitle">A glimpse into the vibrant, diverse, and enriching school life at ERA International School.</p>
+          <span className="inline-block bg-era-yellow/20 text-era-dark font-semibold text-sm px-4 py-1.5 rounded-full mb-4 tracking-wider uppercase">Our Happy Days</span>
+          <h2 className="section-title">Life at ERA Jr KG 🎉</h2>
+          <p className="section-subtitle">A peek into our world of laughter, art, music, and big adventures at ERA Junior KG!</p>
         </div>
 
         {/* Filter Tags */}
@@ -65,7 +65,7 @@ export default function Gallery() {
 
                 {/* Hover overlay */}
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <span className="text-white font-semibold bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/30">View Gallery →</span>
+                  <span className="text-white font-semibold bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/30">See More 🌟</span>
                 </div>
               </div>
 
@@ -79,7 +79,7 @@ export default function Gallery() {
 
         {/* View All */}
         <div className="text-center mt-10">
-          <button className="btn-primary">View Full Gallery</button>
+          <button className="btn-primary">🎈 See All Our Happy Moments</button>
         </div>
       </div>
     </section>

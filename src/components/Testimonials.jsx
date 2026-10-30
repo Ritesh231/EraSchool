@@ -1,50 +1,50 @@
 const testimonials = [
   {
     name: 'Priya Sharma',
-    role: 'Parent of Class VIII Student',
+    role: 'Parent of Jr KG Student',
     avatar: 'PS',
     color: 'from-pink-400 to-rose-500',
-    text: 'ERA International School has been a transformative experience for my daughter. The teachers are incredibly dedicated, and the school\'s holistic approach has made her more confident and curious.',
+    text: 'My daughter absolutely loves coming to school every day! The teachers are so warm and patient. ERA Jr KG has made her confident, expressive, and she has so many little friends already. Best decision ever!',
     rating: 5,
   },
   {
     name: 'Rahul Mehta',
-    role: 'Alumni – Batch 2022',
+    role: 'Parent of Nursery Student',
     avatar: 'RM',
     color: 'from-blue-400 to-era-blue',
-    text: 'My years at ERA shaped who I am today. The faculty pushed me to achieve my best, and the values instilled here helped me crack IIT JEE. Forever grateful to ERA!',
+    text: 'My son used to cry every morning before school — but from day one at ERA, he couldn\'t wait to go back! The welcoming environment and beautiful classrooms made all the difference. Truly a home away from home.',
     rating: 5,
   },
   {
     name: 'Sunita Gupta',
-    role: 'Parent of Class XI Student',
+    role: 'Parent of Sr KG Student',
     avatar: 'SG',
     color: 'from-purple-400 to-purple-600',
-    text: 'The school\'s infrastructure and teaching quality are excellent. My son has shown remarkable improvement in both academics and extra-curricular activities since joining ERA.',
+    text: 'The way ERA integrates art, music, stories, and play into learning is incredible. My daughter can now count, identify shapes, and even read simple words — and she thinks it\'s all just fun! Outstanding teachers.',
     rating: 5,
   },
   {
     name: 'Aditya Patel',
-    role: 'Class XII Student',
+    role: 'Parent of Jr KG Student',
     avatar: 'AP',
     color: 'from-green-400 to-era-green',
-    text: 'ERA gives us a perfect balance of studies and fun. The teachers are supportive and the facilities are amazing. I feel prepared for whatever comes next!',
+    text: 'ERA Jr KG is exactly what we were looking for — a place that focuses on the whole child, not just academics. My son comes home every day with stories, crafts, and the biggest smile. Truly remarkable.',
     rating: 5,
   },
   {
     name: 'Meena Verma',
-    role: 'Parent of Class III Student',
+    role: 'Parent of Nursery Student',
     avatar: 'MV',
     color: 'from-amber-400 to-orange-500',
-    text: 'The pre-primary and primary section is exceptional. My child absolutely loves school – the teachers make learning so fun and engaging. Best decision we made!',
+    text: 'I was nervous about sending my little one to school so early, but the ERA team put us completely at ease. The safety, care, and love they show every child is extraordinary. My baby is thriving!',
     rating: 5,
   },
   {
     name: 'Dr. Vikram Singh',
-    role: 'Parent – IIT Graduate',
+    role: 'Parent of Jr KG Student',
     avatar: 'VS',
     color: 'from-teal-400 to-cyan-600',
-    text: 'As a technical professional, I value quality education greatly. ERA\'s STEM programs and smart classrooms are truly world-class. My daughter thrives here every day.',
+    text: 'As a parent, I cannot ask for more. ERA gives our children a safe, stimulating, and joyful environment. The outdoor play area, music sessions, and art studio are simply wonderful. Highly recommend!',
     rating: 5,
   },
 ]
@@ -54,14 +54,14 @@ export default function Testimonials() {
     <section className="py-24 bg-gradient-to-br from-era-dark via-era-blue to-blue-800 relative overflow-hidden">
       <div className="absolute inset-0 hero-dots opacity-20"></div>
       <div className="absolute top-10 left-10 w-64 h-64 bg-era-yellow/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-10 right-10 w-64 h-64 bg-era-green/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-10 right-10 w-64 h-64 bg-pink-400/10 rounded-full blur-3xl"></div>
 
       <div className="relative max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="inline-block bg-era-yellow/20 text-era-yellow font-semibold text-sm px-4 py-1.5 rounded-full mb-4 tracking-wider uppercase">Testimonials</span>
-          <h2 className="font-heading font-bold text-4xl md:text-5xl text-white mb-4">What Our Community<br /><span className="text-era-yellow">Says About Us</span></h2>
-          <p className="text-white/60 text-lg max-w-2xl mx-auto">Thousands of families trust ERA International School for their children's bright futures.</p>
+          <span className="inline-block bg-era-yellow/20 text-era-yellow font-semibold text-sm px-4 py-1.5 rounded-full mb-4 tracking-wider uppercase">Happy Families</span>
+          <h2 className="font-heading font-bold text-4xl md:text-5xl text-white mb-4">What Our Little Stars'<br /><span className="text-era-yellow">Parents Say 💛</span></h2>
+          <p className="text-white/60 text-lg max-w-2xl mx-auto">Hundreds of happy families trust ERA Jr KG for their little one's first magical school adventure.</p>
         </div>
 
         {/* Cards */}
@@ -95,9 +95,9 @@ export default function Testimonials() {
         {/* Bottom stat row */}
         <div className="mt-16 grid grid-cols-3 gap-4 max-w-2xl mx-auto text-center">
           {[
-            { value: '4.9/5', label: 'Parent Rating' },
-            { value: '5000+', label: 'Happy Families' },
-            { value: '100%', label: 'Recommend Us' },
+            { value: '4.9/5', label: 'Parent Rating ⭐' },
+            { value: '500+', label: 'Happy Families 👨‍👩‍👧' },
+            { value: '100%', label: 'Love ERA 💛' },
           ].map((s, i) => (
             <div key={i} className="glass rounded-2xl p-5">
               <p className="font-heading font-black text-3xl text-era-yellow">{s.value}</p>
